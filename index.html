@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>to MY ZMM</title>
+
+<style>
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(45deg, #ff6ec4, #7873f5);
+  font-family: Arial;
+  overflow: hidden;
+  text-align: center;
+}
+
+h1 {
+  color: white;
+  font-size: 3em;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+.question {
+  color: white;
+  margin-top: 30px;
+  font-size: 1.3em;
+}
+
+.buttons {
+  margin-top: 15px;
+}
+
+button {
+  padding: 10px 25px;
+  font-size: 16px;
+  border: none;
+  border-radius: 20px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.yes {
+  background: #00ff99;
+}
+
+.no {
+  background: #ff4d4d;
+}
+
+.confetti {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: yellow;
+  animation: fall 4s infinite;
+}
+
+@keyframes fall {
+  from { top: -10px; }
+  to { top: 110%; }
+}
+</style>
+</head>
+
+<body>
+
+<h1>✨ Will You Be My Valentine Princess? ✨💌</h1>
+  <h4> (to me , everyday is valentines days when i have you 😅)</h4>
+
+<div class="buttons">
+<button class="yes" onclick="sayLove()">YES (KISS ME🫦)</button>
+<button class="no" onclick="sayNo()">NO (HURT ME💔)</button>
+</div>
+
+<script>
+function sayLove(){
+  alert("❤️ NGIYAKUTHANDA NTOKAZI YAMI ❤️");
+}
+
+function sayNo(){
+  alert("UYABONAKE! NGIZOKUSHISA NJALO😅😂");
+}
+
+for(let i=0;i<40;i++){
+  let c = document.createElement("div");
+  c.className = "confetti";
+  c.style.left = Math.random()*100+"%";
+  c.style.animationDelay = Math.random()*4+"s";
+  document.body.appendChild(c);
+}
+</script>
+
+</body>
+</html>
